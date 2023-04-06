@@ -14,8 +14,9 @@
     console.log("Boas vindas ao jogo de BlackJack!")
 
     const confirmacao = confirm("Quer iniciar uma nova rodada?")
-    const embaralhar =  import ('./nãoMexer.js')
-    const carta = comprarCarta(embaralhar)
+    
+   //  const carta = comprarCarta()
+   //  console.log(carta)
     const max = Number(21)
     
     
@@ -29,7 +30,13 @@
       let pontosCpu1 = carta1Cpu.valor + carta2Cpu.valor
 
       if(pontosUser1 === 22 || pontosCpu1 === 22){
-         confirmacao = comprarCarta()
+         const carta3 = 
+         carta3 = comprarCarta()
+         carta4 = comprarCarta()
+         carta5 = comprarCarta()
+         carta6 = comprarCarta()
+         pontosUser1 = carta3.valor + carta4.valor
+         pontosCpu1 = carta5.valor + carta6.valor
       }
 
       let novaCarta = confirm(`Suas cartas são ${carta1User.texto} e ${carta2User.texto} = ${pontosUser1} pontos. \nA carta do computador é ${carta1Cpu.texto} = ${carta1Cpu.valor} + carta secreta. \nDeseja comprar mais uma carta?`)
@@ -45,7 +52,7 @@
          console.log(`Computador - cartas: ${carta1Cpu.texto} ${carta2Cpu.texto} ${carta3Cpu.texto} - pontuação: ${pontosCpu2}`)
 
       if(pontosUser2 > max && pontosCpu2 > max){
-         console.log("Empate!")
+         console.log("Os dois perderam.")
       }else if(pontosUser2 > max){
          console.log("O computador ganhou!")
       }else if(pontosCpu2 > max){
